@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Titanium Studios — Architect Portfolio
+
+A modern, premium architect portfolio website with a **White & Royal Blue** theme. Built with Next.js (App Router), Tailwind CSS, Framer Motion, and Three.js.
+
+## Tech Stack
+
+- **Next.js 14+** (App Router)
+- **Tailwind CSS** (v4)
+- **Framer Motion** — scroll and page animations
+- **Three.js** (via React Three Fiber) — subtle 3D hero background
+- **Responsive** — Desktop, Tablet, Mobile
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/
+│   ├── page.tsx          # Landing (hero, CTA, philosophy)
+│   ├── gallery/          # Masonry gallery, filters, lightbox
+│   ├── about/            # Founder, mission, timeline, stats
+│   └── contact/          # Form, map, office details
+├── components/
+│   ├── Navbar.tsx        # Sticky nav, mobile menu
+│   ├── Footer.tsx
+│   ├── PageTransition.tsx
+│   ├── GlassCard.tsx
+│   └── Scene3D.tsx       # Three.js particle background
+├── lib/
+│   └── constants.ts      # Site config, gallery images, video URL
+└── public/
+    ├── images/           # Add your architectural images here
+    └── videos/           # Add hero video (e.g. hero.mp4) here
+```
 
-## Learn More
+## Assets
 
-To learn more about Next.js, take a look at the following resources:
+- **Gallery**: The site uses placeholder image URLs from Unsplash. To use your own:
+  - Add images to `public/images/` (e.g. `building-1.jpg`, `interior-1.jpg`).
+  - Update `lib/constants.ts` — set `GALLERY_IMAGES` to use paths like `/images/building-1.jpg`.
+- **Hero video**: A Pexels sample is used by default. For production:
+  - Add a cinematic architectural video to `public/videos/hero.mp4`.
+  - In `lib/constants.ts`, set `HERO_VIDEO = "/videos/hero.mp4"`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Full-width hero with background video and blue gradient overlay
+- Sticky navbar with glassmorphism on scroll
+- Gallery with category filters (Residential / Commercial / Interior) and lightbox
+- About: founder section, mission/vision, timeline, stats counter
+- Contact: validated form, Google Maps embed, office details, social links
+- Smooth page transitions and scroll animations
+- SEO-friendly metadata per page
+- Blue glassmorphism cards and button micro-interactions
 
-## Deploy on Vercel
+## Build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+npm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Theme
+
+- **Primary**: White `#FFFFFF`
+- **Accent**: Royal Blue `#1E3A8A`
+- **Fonts**: Playfair Display (headings), Inter (body)
+# Titanium-studios
